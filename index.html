@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Add Chart.js for pie chart -->
+</head>
+<body>
+    <h1>Budget Buddy</h1>
+    <!-- <img src="game.gif"> -->
+    
+
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for expenses...">
+        <button onclick="searchExpenses()">Search</button>
+    </div>
+
+    <!-- Expense Form -->
+    <div class="expense-form">
+        <h2>Add Expense</h2>
+        <form id="expenseForm">
+            <input type="text" id="expenseName" placeholder="Expense Name" required>
+            <input type="number" id="salary" placeholder="Salary" required>
+            <input type="number" id="expenseAmount" placeholder="Expense Amount" required>
+            <input type="date" id="expenseDate" required>
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+
+    <!-- Expense List -->
+    <div class="expense-list">
+        <h2>Expense List</h2>
+        <ul id="expenseList"></ul>
+        <p>Total Expense: <span id="totalAmount">0</span></p>
+    </div>
+
+    <!-- View Deleted Expenses Button -->
+     <div class="delete">
+    <button onclick="viewDeletedExpenses()">View Deleted Expenses</button>
+    <ul id="deletedExpensesList"></ul>
+    </div>
+
+    <!-- Pie Chart -->
+    <div>
+         <canvas id="expensePieChart"></canvas>
+
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
